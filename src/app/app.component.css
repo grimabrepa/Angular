@@ -1,0 +1,20 @@
+.ofertas{
+   font-size: 32px;
+   background-color: orangered;
+   color: yellow;
+   list-style: none;
+    
+}
+.ofertas2{
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+
+}
+
+.resetMargen{
+    margin: 0;
+    padding: 0;
+
+}

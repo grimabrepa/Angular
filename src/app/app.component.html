@@ -1,9 +1,21 @@
-<p>Hola {{titulo}}</p>
-<input type="text" [(ngModel)]="titulo">
+<p>{{titulo}}</p>
+<p *ngIf="nombre">Hola mi nombre es: {{nombre}}</p> <!--Muestra este parrafo si no esta vacio-->
+<input type="text" [(ngModel)]="nombre"><!--Permite enviar el texto ingresado en el input text al parrafo de la linea 2-->
 <figure>
   <img src={{url}} alt="Helados">
 </figure>
 
-<ul *ngFor="let gusto of gustos">
-  <li>{{gusto}}</li>
+<ul *ngFor="let gusto of gustos"><!-- recorre el arreglo que proviene del app.component.ts linea 11-->
+  <li>{{gusto}}</li> <!-- genera item por cada elemento del arreglo-->
+</ul>
+
+<ul *ngFor="let precio of precios"><!-- recorre el arreglo que proviene del app.component.ts linea 13-->
+  <li [ngClass]="'ofertas'">{{precio}}</li> <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 1 observe que el valort lleva un string con comillas simples-->
+</ul>
+
+<ul >
+  <!-- recorre el arreglo que proviene del app.component.ts linea 13-->
+  <li *ngFor="let precio of precios" [ngClass]="['ofertas2', 'resetMargen']">{{precio}}</li>
+  
+   <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 8 y 16 observe que el valor lleva un arreglo con dos clases y cada elemento esta dentro de comillas simples-->
 </ul>
