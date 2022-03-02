@@ -9,6 +9,7 @@
   <li>{{gusto}}</li> <!-- genera item por cada elemento del arreglo-->
 </ul>
 
+<!--DIRECTIVAS NGCLASS-->
 <ul *ngFor="let precio of precios"><!-- recorre el arreglo que proviene del app.component.ts linea 13-->
   <li [ngClass]="'ofertas'">{{precio}}</li> <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 1 observe que el valort lleva un string con comillas simples-->
 </ul>
@@ -16,6 +17,24 @@
 <ul >
   <!-- recorre el arreglo que proviene del app.component.ts linea 13-->
   <li *ngFor="let precio of precios" [ngClass]="['ofertas2', 'resetMargen']">{{precio}}</li>
-  
-   <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 8 y 16 observe que el valor lleva un arreglo con dos clases y cada elemento esta dentro de comillas simples-->
+     <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 8 y 16 observe que el valor lleva un arreglo con dos clases y cada elemento esta dentro de comillas simples-->
+</ul>
+
+<ul >
+  <!-- recorre el arreglo que proviene del app.component.ts linea 13-->
+  <li *ngFor="let mes of meses" [ngClass]="{'ofertas': false}">{{mes}}</li>
+     <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 8 y 16 observe que el valor lleva un registro-->
+</ul>
+<ul >
+  <!-- recorre el arreglo que proviene del app.component.ts linea 13-->
+  <li *ngFor="let mes of meses" [ngClass]="{'ofertas':mes ==='Marzo', 'ofertas2': mes !== 'Marzo'}">{{mes}}</li>
+     <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 8 y 16 observe que el valor lleva un registro-->
+</ul>
+
+<!--DIRECTIVAS NGSTYLE-->
+
+<ul >
+  <!-- recorre el arreglo que proviene del app.component.ts linea 13-->
+  <li *ngFor="let mes of meses" [ngStyle]="{'color': 'red', 'font-size':'72px', 'background-color': mes ==='Enero'?'orange':'tomato'}">{{mes}}</li>
+     <!-- genera item por cada elemento del arreglo aplicando la clase generada en el componente app.componet.css linea 8 y 16 observe que el valor lleva un registro-->
 </ul>

@@ -11,4 +11,5 @@ export class AppComponent {
   gustos = ["Vainilla", "Frutilla", "Limon", "Chocolate"];// interpolacion utilizada  en la app.component.html linea 7
   nombre!:string;//interpolacion utilizada  en la app.component.html linea 2 y 3
   precios =[150, 300, 500, 750, 900, 1200]
+  meses =["Enero", "Febrero", "Marzo", "Abril"];
 }

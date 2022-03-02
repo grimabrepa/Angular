@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   
   imports: [
     BrowserModule,
-    FormsModule, /** Se llamo al modulo FormsModule para que funcione el la directiva ngModel en el app.componente.html linea 2 */
+    FormsModule, /** Se llamo al modulo FormsModule para que funcione  la directiva ngModel en el app.componente.html linea 2 */
   ],
   providers: [],
   bootstrap: [AppComponent]
